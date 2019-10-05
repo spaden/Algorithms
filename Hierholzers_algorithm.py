@@ -14,16 +14,12 @@ def printCircuit(graph):
     
     curr_path.append(0)
     curr_v=0
-    check = True
     while len(curr_path)!=0:
         print()
         print("current path 1")
         print(curr_path)
         print() 
         
-        if check == True:
-            curr_path.pop()
-            check= False
         
         if dct[curr_v]>0:
             curr_path.append(curr_v)
@@ -48,7 +44,6 @@ def printCircuit(graph):
             print(curr_path)
 
     print(circuit)
-    print(str(0), end=" -> ")
     for i in range(1,len(circuit)+1):
         print(str(circuit[-i]), end=" ->")
 graph=[]
